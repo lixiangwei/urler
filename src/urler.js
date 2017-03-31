@@ -1,4 +1,4 @@
-var url = (function(element, callback) {
+var urler = (function(element, callback) {
 	return {
 		getHashObj: function() { 
 			var args = {}; 
