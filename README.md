@@ -1,5 +1,5 @@
 # urler
-URL常用方法(common use method for url)
+获取URL参数 (get url's params)
 
 使用（usage）： urler.getHashObj();  
 
