@@ -1,6 +1,6 @@
 var urler = (function(element, callback) {
 	return {
-		getHashObj: function() { 
+		getHashObj: function() {
 			var args = {}; 
 			var query = location.search.substring(1); 
 			if(query){ 
