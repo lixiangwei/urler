@@ -1,11 +1,13 @@
 var urler = (function(element, callback) {
+	//å­˜å‚¨è·¯ç”±
+	this.routes = {};
 	return {
 		getHashObj: function() {
 			var args = {}; 
 			var query = location.search.substring(1); 
 			if(query){ 
 				if(query.indexOf('=') == -1) { 
-					alert('²ÎÊıĞÎÊ½´íÎó'); 
+					alert('å‚æ•°å½¢å¼é”™è¯¯'); 
 					return false; 
 				}else { 
 					var pairs = query.split('&'); 
@@ -14,7 +16,7 @@ var urler = (function(element, callback) {
 						if(pos == -1) continue; 
 						var name = pairs[i].substring(0, pos); 
 						if(!name) { 
-							alert('²ÎÊıÃû²»ÄÜÎª¿Õ'); 
+							alert('å‚æ•°åä¸èƒ½ä¸ºç©º'); 
 							return false; 
 						} 
 						var value = pairs[i].substring(pos + 1); 
@@ -23,10 +25,17 @@ var urler = (function(element, callback) {
 					} 
 				} 
 			}else { 
-				alert('Ã»ÓĞ²ÎÊı'); 
+				alert('æ²¡æœ‰å‚æ•°'); 
 				return false; 
 			} 
 			return args; 
+		},
+		route: function(path, callback) {
+			this.routes[path] = callback || function(){};
+		},
+		refresh: function() {
+			this.currentUrl = location.hash.slice(1) || '/';
+    			this.routes[this.currentUrl]();
 		}
 	}
 }());
