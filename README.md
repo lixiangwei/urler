@@ -7,11 +7,12 @@
 
 定义路由：  
 
-urler.route("/a", function(){ console.log(a); });
+urler.route("/a", function(){ console.log(a); });  
+
 urler.route("/b", function(){ console.log(b); });
 
-监听URL变化：
-window.addEventListener('load', urler.refresh(), false);
+监听URL变化：  
+window.addEventListener('load', urler.refresh(), false);  
 window.addEventListener('hashchange', urler.refresh(), false);
 
 不依赖其他库（no dependence）  
