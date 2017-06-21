@@ -15,7 +15,9 @@ window.addEventListener('load', urler.refresh(), false);
 window.addEventListener('hashchange', urler.refresh(), false);    
 
 HTML:  
-  <a href="#/a">a</a>  
-    <a href="#/b">b</a>
+```
+<a href="#/a">a</a>
+<a href="#/b">b</a>
+```
 
 不依赖其他库（no dependence）  
